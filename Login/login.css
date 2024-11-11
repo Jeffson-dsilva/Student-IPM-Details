@@ -5,25 +5,25 @@ body {
     padding: 0;
 }
 
-
 header {
     background-color: white;
-    color: #0056b3;
+    color: #212529;
     padding: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px; /* Adjust spacing between logo and text */
+    gap: 15px;
 }
 
 .logo-img {
-    width: 80px; /* Adjust width as needed */
-    height: auto; /* Keep aspect ratio */
+    width: 80px;
+    height: auto;
 }
 
 .logo-text {
@@ -35,6 +35,7 @@ header .logo p {
     margin: 0;
     text-align: center;
 }
+
 .container {
     width: 50%;
     margin: 0 auto;
@@ -44,19 +45,12 @@ header .logo p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/*.registration-form {
-    margin-top: 20px;
-    border-radius: 8px;
-   
-}
-*/
-
 .container h2 {
     text-align: center;
 }
+
 .form-group {
     margin-bottom: 15px;
-    
 }
 
 label {
@@ -65,7 +59,6 @@ label {
 }
 
 input, select {
-    width: 98%;
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
@@ -83,12 +76,55 @@ button {
 }
 
 button:hover {
-    background: #0056b3;
+    background: grey;
 }
+
+
+.password-container {
+    position: relative;
+    margin-right: 10px;
+}
+
+/* .password-container input {
+    width: 90%;
+    padding-right: 20px; 
+} */
+
+.eye-icon {
+    position: relative;
+    top: 50%;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#email, #name, #usn {
+    width: 97%;
+}
+
+#role {
+    width: 100%;
+}
+
 
 .error {
     color: red;
     font-size: 0.9em;
 }
 
-
+.password-container {
+    position: relative;
+}
+ .password-container input {
+    width: 94%;
+    padding-right: 40px;
+}
+.password-container .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
