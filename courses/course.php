@@ -23,7 +23,7 @@
             </i>
             <i class="fas fa-user" id="user-icon">
             </i>
-            <i class="fas fa-cog" id="toggle-mode">
+            <i class="fas fa-moon dark-mode-toggle" id="toggle-mode">
             </i>
             </div>
             <div class="user-info" id="user-info">
@@ -38,9 +38,10 @@
             </button>
             </div>
     <div class="body-container">
-  <div class="container">
+      <div class="container">
+  <div class="img-container">
    <div class="image">
-    <img alt="City skyline illustration" height="200" src="https://storage.googleapis.com/a1aa/image/J6VG0sw5aOppCdPPR4fGAoSRBawum6BCbiLaAbDKIabWo63JA.jpg" width="600"/>
+    <img alt="City skyline illustration" height="200" src="mooc.jpeg"/>
    </div>
    </div>
    <div class="form-section">
@@ -106,8 +107,27 @@
     </div>
    </div>
   </div>
+  </div>
   
   <script>
+
+       // Dark mode toggle functionality
+       const toggleButton = document.getElementById('toggle-mode');
+        
+        toggleButton.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            
+            // Switch icon between sun and moon
+            if (document.body.classList.contains('dark-mode')) {
+                toggleButton.classList.remove('fa-moon');
+                toggleButton.classList.add('fa-sun');
+            } else {
+                toggleButton.classList.remove('fa-sun');
+                toggleButton.classList.add('fa-moon');
+            }
+        });
+
+
     document.getElementById('user-icon').addEventListener('click', function() {
                 var userInfo = document.getElementById('user-info');
                 if (userInfo.style.display === 'none' || userInfo.style.display === '') {
@@ -117,9 +137,7 @@
                 }
             });
 
-            document.getElementById('toggle-mode').addEventListener('click', function() {
-                document.body.classList.toggle('dark-mode');
-            });
+           
 
             function logout() {
                 window.location.href = 'login.php';
@@ -157,4 +175,3 @@
   </script>
  </body>
 </html>
-
