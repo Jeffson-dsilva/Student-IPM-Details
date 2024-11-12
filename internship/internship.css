@@ -9,8 +9,19 @@ body {
 .body-container {
     display: flex;
     gap: 50px;
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
   }
 
 header {
@@ -101,7 +112,7 @@ margin-top: 10px;
 
 /* Header in Dark Mode */
 .dark-mode header {
-    background-color: #1e1e1e;
+    background-color: #444;
     color: #ffffff;
 }
 
@@ -112,7 +123,7 @@ margin-top: 10px;
 
 /* Navbar in Dark Mode */
 .dark-mode .navbar {
-    background-color: #1e1e1e;
+    background-color: #444;
 }
 
 .dark-mode .navbar i {
@@ -137,7 +148,7 @@ margin-top: 10px;
 
 /* Form Container in Dark Mode */
 .dark-mode .container {
-    background-color: #1e1e1e;
+    background-color: #444;
 }
 
 .dark-mode .form-section {
@@ -177,16 +188,15 @@ margin-top: 10px;
 /* ------------------------------------------------------------------------------------ */
 
 
-.container {
+.img-container {
     width: 700px;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 .image {
     background-color: #e8f0fe;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 .image img {
@@ -196,11 +206,11 @@ margin-top: 10px;
 
 
 .form-section {
-    height: 800px;
+
+    height: 100%;
     padding: 20px;
     margin-top: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .form-section .form-group {
     margin-bottom: 20px;
@@ -219,6 +229,7 @@ margin-top: 10px;
 }
 .form-section .star-mean {
     color: #d93025;
+    margin-bottom: 10px;
 }
 .form-section .form-group input {
     width: 100%;
@@ -236,6 +247,7 @@ margin-top: 10px;
 }
 .form-section .submit-button {
     text-align: center;
+    margin-top: 70px;
 }
 .form-section .submit-button button {
     background-color: #1a73e8;
