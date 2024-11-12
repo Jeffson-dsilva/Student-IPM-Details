@@ -37,7 +37,7 @@ header .logo p {
 }
 
 .container {
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
     padding: 20px;
     background: white;
@@ -99,6 +99,10 @@ button:hover {
     transform: translateY(-50%);
     cursor: pointer;
 }
+/* input[type="password"],
+input[type="text"] {
+    width:380px;
+} */
 
 #email, #name, #usn {
     width: 97%;
@@ -107,7 +111,18 @@ button:hover {
 #role {
     width: 100%;
 }
+/* .password-container {
+    position: relative;
+}
 
+.show-password {
+    margin-top: 8px;
+    margin-right: 620px;
+} */
+
+/* .show-password input {
+    margin-right: 55px;
+} */
 
 .error {
     color: red;
