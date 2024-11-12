@@ -23,7 +23,7 @@
             </i>
             <i class="fas fa-user" id="user-icon">
             </i>
-            <i class="fas fa-cog" id="toggle-mode">
+            <i class="fas fa-moon dark-mode-toggle" id="toggle-mode">
             </i>
             </div>
             <div class="user-info" id="user-info">
@@ -40,8 +40,9 @@
 
             <div class="body-container">  
         <div class="container">
+          <div class="img-container">
         <div class="image">
-            <img alt="Internship" height="200" src="internships.jpeg" width="600"/>
+            <img alt="Internship" height="200" src="intership.jpeg" width="600"/>
         </div>
     </div>
     
@@ -49,7 +50,6 @@
     <form action="thankYou.php" method="POST" enctype="multipart/form-data">
     <div class="star-mean">
    * Indicates required question
-      
       </div>
     <div class="form-group">
      <label for="name">
@@ -134,8 +134,26 @@
     </div>
    </div>
   </div> 
-
+  </div>
   <script>
+
+    // Dark mode toggle functionality
+    const toggleButton = document.getElementById('toggle-mode');
+        
+        toggleButton.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            
+            // Switch icon between sun and moon
+            if (document.body.classList.contains('dark-mode')) {
+                toggleButton.classList.remove('fa-moon');
+                toggleButton.classList.add('fa-sun');
+            } else {
+                toggleButton.classList.remove('fa-sun');
+                toggleButton.classList.add('fa-moon');
+            }
+        });
+
+
     document.getElementById('user-icon').addEventListener('click', function() {
                 var userInfo = document.getElementById('user-info');
                 if (userInfo.style.display === 'none' || userInfo.style.display === '') {
@@ -145,9 +163,7 @@
                 }
             });
 
-            document.getElementById('toggle-mode').addEventListener('click', function() {
-                document.body.classList.toggle('dark-mode');
-            });
+          
 
             function logout() {
                 window.location.href = 'login.php';
@@ -188,4 +204,3 @@
     </script>
  </body>
 </html>
-
