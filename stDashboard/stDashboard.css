@@ -2,9 +2,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #8d23f8;
+    background-color: #a2a8d3;
 
   }
+
   
   header {
     background-color: white;
@@ -39,7 +40,7 @@ header .logo p {
   .container {
     width: 80%;
     margin: 50px auto;
-    background-color: white;
+    background-color: #e7eaf6;
     padding: 40px;
     border-radius: 10px;
     font-style:bold;
@@ -57,7 +58,7 @@ header .logo p {
   }
   
   .dashboard-button {
-    background-color: #1379e7;
+    background-color: #38598b;
     color: white;
     padding: 15px 20px;
     border: none;
@@ -71,7 +72,7 @@ header .logo p {
   }
   
   .dashboard-button:hover {
-    background-color: #45a049;
+    background-color: #113f67;
   }
   
   .button-logo {
