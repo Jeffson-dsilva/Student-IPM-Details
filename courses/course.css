@@ -92,7 +92,7 @@ margin-top: 10px;
 
 /* Header in Dark Mode */
 .dark-mode header {
-    background-color: #1e1e1e;
+    background-color: #444;
     color: #ffffff;
 }
 
@@ -103,7 +103,7 @@ margin-top: 10px;
 
 /* Navbar in Dark Mode */
 .dark-mode .navbar {
-    background-color: #1e1e1e;
+    background-color: #444;
 }
 
 .dark-mode .navbar i {
@@ -117,6 +117,8 @@ margin-top: 10px;
     color: #e0e0e0;
 }
 
+
+
 .dark-mode .user-info button {
     background-color: #ff004d;
     color: #ffffff;
@@ -126,8 +128,11 @@ margin-top: 10px;
     background-color: #a21232;
 }
 
-.dark-mode .body-container .container {
+.dark-mode .body-container .img-container {
     background-color: #1e1e1e;
+}
+.dark-mode .body-container .container {
+    background-color: #444;
 }
 
 .dark-mode .form-section {
@@ -167,9 +172,9 @@ margin-top: 10px;
 
 .body-container {
     display: flex;
-    margin-top: 30px;
     align-items: center;
     justify-content: center;
+    padding: 20px;
   }
 
   @media (max-width: 768px) {
@@ -185,14 +190,26 @@ margin-top: 10px;
 }
 
 .container {
-    width: 700px;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
     background-color: white;
+    padding: 10px;
+    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+.img-container {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
     overflow: hidden;
 }
 .image {
     background-color: #e8f0fe;
-    padding: 20px;
+    padding: 10px;
+    border-radius: 8px;
     text-align: center;
 }
 .image img {
@@ -201,10 +218,11 @@ margin-top: 10px;
 }
 
 .form-section {
-    width: 700px;
-    height: 660px;
+
+    height: 100%;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    border-radius: 8px;
 }
 .form-section .form-group {
     margin-bottom: 20px;
@@ -237,7 +255,7 @@ margin-top: 10px;
 }
 .form-section .submit-button {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 .form-section .submit-button button {
     background-color: #1a73e8;
