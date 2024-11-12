@@ -1,0 +1,251 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f0fe;
+    margin: 0;
+    padding: 0;
+}
+
+
+.body-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+header {
+    background-color: white;
+    color: #0452a5;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adjust spacing between logo and text */
+}
+
+.logo-img {
+    width: 80px; /* Adjust width as needed */
+    height: auto; /* Keep aspect ratio */
+}
+
+.logo-text {
+    text-align: left;
+}
+
+header .logo h1,
+header .logo p {
+    margin: 0;
+    text-align: center;
+}
+
+
+
+
+/* ------------------------------------------------------------------------------ */
+.navbar {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navbar i {
+    margin-left: 20px;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+}
+
+
+.user-info {
+    display: none;
+    position: absolute;
+    
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.user-info p {
+    margin: 5px 0;
+}
+.user-info button {
+display: block;
+width: 100%;
+padding: 10px;
+background-color: #1a73e8;
+color: #fff;
+text-align: center;
+border: none;
+border-radius: 5px;
+text-decoration: none;
+margin-top: 10px;
+}
+
+.user-info button:hover {
+    background-color: #1558b0;
+}
+/* General Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Header in Dark Mode */
+.dark-mode header {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark-mode header .logo h1,
+.dark-mode header .logo p {
+    color: #ffffff;
+}
+
+/* Navbar in Dark Mode */
+.dark-mode .navbar {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .navbar i {
+    color: #ffffff;
+}
+
+/* User Info Dropdown in Dark Mode */
+.dark-mode .user-info {
+    background-color: #2e2e2e;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+.dark-mode .user-info button {
+    background-color: #ff004d;
+    color: #ffffff;
+}
+
+.dark-mode .user-info button:hover {
+    background-color: #a21232;
+}
+
+/* Form Container in Dark Mode */
+.dark-mode .container {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .form-section {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.dark-mode .form-section .form-group input {
+    background-color: #2e2e2e;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+.dark-mode .form-section .form-group label {
+    color: #b0b0b0;
+}
+
+.dark-mode .form-section .form-group label .required {
+    color: #ff5252;
+}
+
+/* Submit Button in Dark Mode */
+.dark-mode .form-section .submit-button button {
+    background-color: #ff004d;
+    color: #ffffff;
+}
+
+.dark-mode .form-section .submit-button button:hover {
+    background-color: #a21232;
+}
+
+/* Image Section in Dark Mode */
+.dark-mode .image {
+    background-color: #1e1e1e;
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+
+.container {
+    width: 700px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.image {
+    background-color: #e8f0fe;
+    padding: 20px;
+    text-align: center;
+}
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+
+.form-section {
+    height: 800px;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.form-section .form-group {
+    margin-bottom: 20px;
+}
+.form-section .form-group label {
+    display: block;
+    font-size: 16px;
+    color: #202124;
+    margin-bottom: 5px;
+}
+.form-section .form-group label .required {
+    color: #d93025;
+}
+.form-section .form-group .required {
+    color: #d93025;
+}
+.form-section .star-mean {
+    color: #d93025;
+}
+.form-section .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-section .form-group small {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #5f6368;
+}
+.form-section .submit-button {
+    text-align: center;
+}
+.form-section .submit-button button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.form-section .submit-button button:hover {
+    background-color: #1558b0;
+}
