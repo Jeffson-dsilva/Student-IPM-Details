@@ -22,7 +22,7 @@
     </i>
     <i class="fas fa-user" id="user-icon">
     </i>
-    <i class="fas fa-cog" id="toggle-mode">
+    <i class="fas fa-moon dark-mode-toggle" id="toggle-mode">
     </i>
     </div>
     <div class="user-info" id="user-info">
@@ -40,22 +40,41 @@
     <div class="container">
         <h1>Student Dashboard </h1><br><br>
         <div class="button-container">
-        <button class="dashboard-button">
-            <img src="internship.png" alt="Logo 1" class="button-logo">
-            <b><span>INTERNSHIP DETAILS</span></b>
-        </button>
-        <button class="dashboard-button">
-            <img src="project.png" alt="Logo 2" class="button-logo">
-        <b>  <span>PROJECT DETAILS</span></b>
-        </button>
-        <button class="dashboard-button">
-            <img src="courses.png" alt="Logo 3" class="button-logo">
-            <b><span>MOOC COURSE DETAILS</span></b>
-        </button>
-        </div><br><br>
+    <button class="dashboard-button" onclick="window.location.href='internship.php'">
+        <img src="internship.png" alt="Logo 1" class="button-logo">
+        <b><span>INTERNSHIP DETAILS</span></b>
+    </button>
+    <button class="dashboard-button" onclick="window.location.href='project.php'">
+        <img src="project.png" alt="Logo 2" class="button-logo">
+        <b><span>PROJECT DETAILS</span></b>
+    </button>
+    <button class="dashboard-button" onclick="window.location.href='course.php'">
+        <img src="courses.png" alt="Logo 3" class="button-logo">
+        <b><span>MOOC COURSE DETAILS</span></b>
+    </button>
+</div>
+<br><br>
     </div>
 
     <script>
+
+        // Dark mode toggle functionality
+    const toggleButton = document.getElementById('toggle-mode');
+        
+        toggleButton.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            
+            // Switch icon between sun and moon
+            if (document.body.classList.contains('dark-mode')) {
+                toggleButton.classList.remove('fa-moon');
+                toggleButton.classList.add('fa-sun');
+            } else {
+                toggleButton.classList.remove('fa-sun');
+                toggleButton.classList.add('fa-moon');
+            }
+        });
+
+
     document.getElementById('user-icon').addEventListener('click', function() {
                 var userInfo = document.getElementById('user-info');
                 if (userInfo.style.display === 'none' || userInfo.style.display === '') {
@@ -65,9 +84,6 @@
                 }
             });
 
-            document.getElementById('toggle-mode').addEventListener('click', function() {
-                document.body.classList.toggle('dark-mode');
-            });
 
             function logout() {
                 window.location.href = 'login.php';
