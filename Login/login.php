@@ -73,7 +73,68 @@
         </div>
     </main>
 
+
+
+
     <script>
+    function toggleUSNField() {
+        const role = document.getElementById('role').value;
+        const usnField = document.getElementById('usnField');
+        if (role === 'student') {
+            usnField.style.display = 'block';
+        } else {
+            usnField.style.display = 'none';
+        }
+    }
+
+    document.querySelector('.toggle-password').addEventListener('click', function () {
+        const passwordField = document.getElementById('password');
+        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordField.setAttribute('type', type);
+        this.classList.toggle('fa-eye-slash');
+    });
+
+    function validateForm() {
+        let valid = true;
+        
+        // Role validation
+        const role = document.getElementById('role').value;
+        const roleError = document.getElementById('roleError');
+        roleError.innerText = '';
+        
+        if (role === 'Select Role') {
+            roleError.innerText = 'Please select a role.';
+            valid = false;
+        }
+
+         // Email validation for SJEC domain
+         const email = document.getElementById('email').value;
+            const emailError = document.getElementById('emailError');
+            emailError.innerText = '';
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@sjec\.ac\.in$/;
+
+            if (!emailPattern.test(email)) {
+                emailError.innerText = 'Please enter a valid SJEC email.';
+                valid = false;
+            }
+        
+        // Password validation
+        const password = document.getElementById('password').value;
+        const passwordError = document.getElementById('passwordError');
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        
+        passwordError.innerText = '';
+
+        if (!passwordRegex.test(password)) {
+            passwordError.innerText = 'Password must contain at least 8 characters, including uppercase, lowercase, number, and special character.';
+            valid = false;
+        }
+
+        return valid;
+    }
+</script>
+
+    <!-- <script>
         function toggleUSNField() {
             const role = document.getElementById('role').value;
             const usnField = document.getElementById('usnField');
@@ -83,41 +144,44 @@
                 usnField.style.display = 'none';
             }
         }
-    
+
+
         document.querySelector('.toggle-password').addEventListener('click', function () {
             const passwordField = document.getElementById('password');
             const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
             passwordField.setAttribute('type', type);
             this.classList.toggle('fa-eye-slash');
         });
-    
+
+        // function togglePasswordVisibility() {
+        //     const password = document.getElementById("password");
+        //     const eyeIcon = document.getElementById("eyeIcon");
+            
+        //     if (password.type === "password") {
+        //         password.type = "text";
+        //         eyeIcon.src = "hidePass.png"; // Switch to hide icon
+        //     } else {
+        //         password.type = "password";
+        //         eyeIcon.src = "showPass.png"; // Switch to show icon
+        //     }
+        // }
+
         function validateForm() {
             let valid = true;
-            
-            // Role validation
-            const role = document.getElementById('role').value;
-            const roleError = document.getElementById('roleError');
-            roleError.innerText = '';
-            
-            if (role === 'Select Role') {
-                roleError.innerText = 'Please select a role.';
-                valid = false;
-            }
-            
-            // Password validation
             const password = document.getElementById('password').value;
             const passwordError = document.getElementById('passwordError');
+
             const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-            
+
             passwordError.innerText = '';
-    
+
             if (!passwordRegex.test(password)) {
                 passwordError.innerText = 'Password must contain at least 8 characters, including uppercase, lowercase, number, and special character.';
                 valid = false;
             }
-    
+
             return valid;
         }
-    </script>
+    </script> -->
 </body>
 </html>
