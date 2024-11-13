@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a2a8d3;
+  
+  }
+  
+  header {
+    background-color: white;
+    color: #0452a5;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adjust spacing between logo and text */
+  }
+  
+  .logo-img {
+    width: 80px; /* Adjust width as needed */
+    height: auto; /* Keep aspect ratio */
+  }
+  
+  .logo-text {
+    text-align: left;
+  }
+  
+  header .logo h1,
+  header .logo p {
+    margin: 0;
+    text-align: center;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #e7eaf6;
+    padding: 40px;
+    border-radius: 10px;
+    font-style:bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .dashboard-button {
+    background-color: #38598b;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s;
+  }
+  
+  .dashboard-button:hover {
+    background-color: #113f67;
+  }
+  
+  .button-logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  } 
+  
+  
+  
+  
+  /* added from the php file */
+  .navbar {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .navbar i {
+    margin-left: 20px;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  
+  .user-info {
+    display: none;
+    position: absolute;
+    
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .user-info p {
+    margin: 5px 0;
+  }
+  .user-info button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #6a1b9a;
+  color: #fff;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  }
+  
+  .user-info button:hover {
+    background-color: #45a049;
+  }
+  .dark-mode {
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  .dark-mode header {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .dark-mode header .logo h1,
+  .dark-mode header .logo p {
+    color: #fff;
+  }
+  
+  .dark-mode .navbar {
+    background-color: #444;
+  }
+  .dark-mode .navbar i {
+    color: #fff; /* Change navbar icons to white in dark mode */
+  }
+  .dark-mode .container {
+    background-color: #444;
+  }
+  .dark-mode .card {
+    background-color: #666;
+  }
+  .dark-mode .user-info {
+    background-color: #444;
+    border-color: #666;
+  }
+  .dark-mode .dashboard-button {
+    background-color: #666;
+    color: #fff;
+  }
+  
+  .dark-mode .dashboard-button:hover {
+    background-color: #a8a5a5;
+  }
+  .dark-mode .user-info button {
+    background-color: #666;
+  }
+  .dark-mode .user-info button:hover {
+    background-color: #a8a5a5;
+  }
+  
+  
