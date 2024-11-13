@@ -132,7 +132,7 @@ margin-top: 10px;
     background-color: #45a049;
 }
 .dark-mode {
-    background-color: #333;
+    background-color: #121212;
     color: #fff;
 }
 
@@ -153,7 +153,7 @@ margin-top: 10px;
     color: #fff; /* Change navbar icons to white in dark mode */
 }
 .dark-mode .container {
-    background-color: #555;
+    background-color: #444;
 }
 .dark-mode .card {
     background-color: #666;
