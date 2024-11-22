@@ -1,139 +1,89 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #212529;
+    background-color: #e8f0fe;
     margin: 0;
     padding: 0;
 }
-
 header {
     background-color: white;
-    color: #212529;
-    padding: 20px;
-    text-align: center;
+    color: #0452a5;
+    padding: 15px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
-
 .logo {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-
 .logo-img {
     width: 80px;
     height: auto;
 }
-
-.logo-text {
-    text-align: left;
-}
-
-header .logo h1,
-header .logo p {
+.logo-text h1 {
+    font-size: 1.5rem;
     margin: 0;
-    text-align: center;
 }
-
+.logo-text p {
+    margin: 0;
+    font-size: 0.9rem;
+}
 .container {
     width: 40%;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .container h2 {
     text-align: center;
+    color: #333;
 }
-
+form {
+    margin-top: 15px;
+}
 .form-group {
     margin-bottom: 15px;
 }
-
 label {
     display: block;
     margin-bottom: 5px;
+    font-weight: bold;
 }
-
 input, select {
+    width: 100%;
     padding: 10px;
-    margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
 }
-
 button {
-    background-color: #212529;
+    background-color: #0452a5;
     color: white;
     border: none;
-    border-radius: 10px;
-    padding: 10px;
-    cursor: pointer;
+    padding: 12px;
     width: 100%;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
 }
-
 button:hover {
-    background: grey;
+    background-color: #033d7b;
 }
-
-
-.password-container {
-    position: relative;
-    margin-right: 10px;
-}
-
-/* .password-container input {
-    width: 90%;
-    padding-right: 20px; 
-} */
-
-.eye-icon {
-    position: relative;
-    top: 50%;
-    right: 10px;
-    width: 24px;
-    height: 24px;
-    transform: translateY(-50%);
-    cursor: pointer;
-}
-/* input[type="password"],
-input[type="text"] {
-    width:380px;
-} */
-
-#email, #name, #usn {
-    width: 97%;
-}
-
-#role {
-    width: 100%;
-}
-/* .password-container {
-    position: relative;
-}
-
-.show-password {
-    margin-top: 8px;
-    margin-right: 620px;
-} */
-
-/* .show-password input {
-    margin-right: 55px;
-} */
-
 .error {
     color: red;
     font-size: 0.9em;
 }
 
+/* Password Visibility Toggle */
 .password-container {
     position: relative;
 }
- .password-container input {
-    width: 94%;
+.password-container input {
     padding-right: 40px;
 }
 .password-container .toggle-password {
@@ -142,4 +92,36 @@ input[type="text"] {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+    .logo-img {
+        width: 60px;
+    }
+    .logo-text h1 {
+        font-size: 1.2rem;
+    }
+    .logo-text p {
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .logo-img {
+        width: 50px;
+    }
+    .logo-text h1 {
+        font-size: 1rem;
+    }
+    .logo-text p {
+        font-size: 0.7rem;
+    }
+    button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
 }
