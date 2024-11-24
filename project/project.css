@@ -1,0 +1,476 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f0fe;
+    margin: 0;
+    padding: 0;
+}
+
+
+.body-container {
+    display: flex;
+    gap: 50px;
+    padding : 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  }
+  header {
+    background-color: white;
+    color: #0452a5;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.logo-img {
+    width: 80px;
+    height: auto;
+}
+.logo-text h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+.logo-text p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+
+
+
+/* ------------------------------------------------------------------------------ */
+.navbar {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navbar i {
+    margin-left: 20px;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+}
+
+
+.user-info {
+    display: none;
+    position: absolute;
+    
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.user-info p {
+    margin: 5px 0;
+}
+.user-info button {
+display: block;
+width: 100%;
+padding: 10px;
+background-color: #1a73e8;
+color: #fff;
+text-align: center;
+border: none;
+border-radius: 5px;
+text-decoration: none;
+margin-top: 10px;
+}
+
+.user-info button:hover {
+    background-color: #1558b0;
+}
+
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    right: 10px; /* Align to the right of the icon */
+    background-color: #ffffff;
+    margin-top: 2px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 200px;
+    z-index: 10;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  /* Show class to make it visible */
+  .dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    color: #333;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    text-align: center;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .dropdown-menu a i {
+    font-size: 0.9em; /* Adjust icon size relative to text */
+    margin-right: 8px; /* Space between icon and text */
+    vertical-align: middle; /* Aligns the icon with the text */
+  }
+
+/* General Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Header in Dark Mode */
+.dark-mode header {
+    background-color: #444;
+    color: #ffffff;
+}
+
+.dark-mode header .logo h1,
+.dark-mode header .logo p {
+    color: #ffffff;
+}
+
+/* Navbar in Dark Mode */
+.dark-mode .navbar {
+    background-color: #444;
+}
+
+.dark-mode .navbar i {
+    color: #ffffff;
+}
+
+/* User Info Dropdown in Dark Mode */
+.dark-mode .user-info {
+    background-color: #2e2e2e;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+.dark-mode .user-info button {
+    background-color: #ff004d;
+    color: #ffffff;
+}
+
+.dark-mode .user-info button:hover {
+    background-color: #a21232;
+}
+
+/* Form Container in Dark Mode */
+.dark-mode .container {
+    background-color: #444;
+}
+
+.dark-mode .form-section {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.dark-mode .form-section .form-group input {
+    background-color: #2e2e2e;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+.dark-mode .form-section .form-group textarea {
+    background-color: #2e2e2e; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    border: 1px solid #444; /* Dark border */
+}
+
+.dark-mode .form-section .form-group label {
+    color: #b0b0b0;
+}
+
+.dark-mode .form-section .form-group label .required {
+    color: #ff5252;
+}
+
+/* Submit Button in Dark Mode */
+.dark-mode .form-section .submit-button button {
+    background-color: #ff004d;
+    color: #ffffff;
+}
+
+.dark-mode .form-section .submit-button button:hover {
+    background-color: #a21232;
+}
+
+/* Image Section in Dark Mode */
+.dark-mode .image {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .dropdown-menu {
+    background-color: #666;
+  }
+  .dark-mode .dropdown-menu:hover {
+    background-color: #a8a5a5;
+  }
+  .dark-mode .dropdown-menu a {
+    color: #fff;
+  }
+  .dark-mode .dropdown-menu a:hover {
+    color: #121212;
+  }
+
+/* ------------------------------------------------------------------------------------ */
+
+
+.img-container {
+    width: 700px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.image {
+    background-color: #e8f0fe;
+    padding: 10px;
+    text-align: center;
+}
+.image img {
+    width: 100%;
+    height: 70%;
+}
+
+
+.form-section {
+
+    height: 100%;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+.form-section .star-mean {
+    color: #d93025;
+    margin-bottom: 10px;
+}
+.form-section .form-group {
+    margin-bottom: 30px;
+}
+.form-section .form-group label {
+    display: block;
+    font-size: 16px;
+    color: #202124;
+    margin-bottom: 10px;
+}
+.form-section .form-group label .required {
+    color: #d93025;
+}
+.form-section .form-group .required {
+    color: #d93025;
+}
+
+.form-section .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-section .form-group small {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #5f6368;
+}
+.form-section .submit-button {
+    text-align: center;
+    margin-top: 70px;
+}
+.form-section .submit-button button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.form-section .submit-button button:hover {
+    background-color: #1558b0;
+}
+
+
+/* Error message styles */
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+
+/* Success modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+  }
+  
+  .modal i {
+    font-size: 50px;
+    color: #4CAF50; /* Green color for success tick */
+  }
+  
+  .modal h2 {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .modal button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal button:hover {
+    background-color: #45a049;
+  }
+  
+
+  @media(max-width: 768px) {
+    .navbar i {
+        font-size: 18px;
+    }
+
+    .logo-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo-text {
+        font-size: 14px;
+    }
+
+    .body-container {
+        padding: 10px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .img-container {
+        width: 100%;
+    }
+
+    /* Adjust the input fields and labels for smaller screens */
+    .form-section .form-group {
+        width: 100%;
+    }
+
+    .form-section .form-group input,
+    .form-section .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Adjusting the submit button size */
+    .form-section .submit-button button {
+        padding: 10px 15px;
+    }
+
+    /* Adjust for dark mode elements as well */
+    .dark-mode .form-section .form-group input,
+    .dark-mode .form-section .form-group textarea {
+        font-size: 14px;
+    }
+
+    .dark-mode .form-section .submit-button button {
+        font-size: 16px;
+    }
+     /* Success Modal */
+     .modal {
+        width: 250px;
+    }
+}
+
+@media(max-width: 480px) {
+    .logo-img {
+        width: 80px;
+    }
+
+    .logo-text {
+        font-size: 10px;
+    }
+
+    .navbar i {
+        font-size: 18px;
+    }
+
+    /* Stack the form fields vertically and adjust their width */
+    .body-container {
+        padding: 5px;
+        margin-top: 5px;
+
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .form-section .form-group input,
+    .form-section .form-group textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .submit-button button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* Adjust for the success modal */
+    .modal {
+        width: 80%;
+    }
+}
