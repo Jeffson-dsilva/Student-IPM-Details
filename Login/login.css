@@ -95,7 +95,7 @@ button:hover {
 }
 
 /* Responsive Design */
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .container {
         width: 90%;
         padding: 15px;
@@ -110,7 +110,7 @@ button:hover {
         font-size: 0.8rem;
     }
 }
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
     .logo-img {
         width: 50px;
     }
