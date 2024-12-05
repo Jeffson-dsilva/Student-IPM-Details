@@ -6,35 +6,31 @@ body {
 
   }
 
-  
   header {
     background-color: white;
     color: #0452a5;
-    padding: 10px;
-    text-align: center;
+    padding: 15px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px; /* Adjust spacing between logo and text */
+    gap: 15px;
 }
-
 .logo-img {
-    width: 80px; /* Adjust width as needed */
-    height: auto; /* Keep aspect ratio */
+    width: 80px;
+    height: auto;
 }
-
-.logo-text {
-    text-align: left;
-}
-
-header .logo h1,
-header .logo p {
+.logo-text h1 {
+    font-size: 1.5rem;
     margin: 0;
-    text-align: center;
+}
+.logo-text p {
+    margin: 0;
+    font-size: 0.9rem;
 }
 
   .container {
@@ -67,6 +63,7 @@ header .logo p {
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    gap: 10px;
     align-items: center;
     transition: background-color 0.3s;
   }
@@ -86,6 +83,7 @@ header .logo p {
 
 /* added from the php file */
   .navbar {
+    position: relative;
     background-color: #fff;
     padding: 10px 20px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
@@ -104,13 +102,12 @@ header .logo p {
 .user-info {
     display: none;
     position: absolute;
-    
+    margin-top: 2px;
     right: 20px;
     background-color: #fff;
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .user-info p {
     margin: 5px 0;
@@ -129,8 +126,56 @@ margin-top: 10px;
 }
 
 .user-info button:hover {
-    background-color: #45a049;
+    background-color: #113f67;
 }
+
+
+  
+  /* Dropdown Menu Styling */
+  .dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    right: 10px; /* Align to the right of the icon */
+    background-color: #ffffff;
+    margin-top: 2px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 200px;
+    z-index: 10;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  /* Show class to make it visible */
+  .dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    color: #333;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .dropdown-menu a i {
+    font-size: 0.9em; /* Adjust icon size relative to text */
+    margin-right: 8px; /* Space between icon and text */
+    vertical-align: middle; /* Aligns the icon with the text */
+  }
+
+  
 .dark-mode {
     background-color: #121212;
     color: #fff;
@@ -171,59 +216,128 @@ margin-top: 10px;
     background-color: #a8a5a5;
 }
 .dark-mode .user-info button {
-    background-color: #666;
+    background-color: #ff004d;
 }
 .dark-mode .user-info button:hover {
-    background-color: #a8a5a5;
+    background-color: #a21232;
+}
+.dark-mode .dropdown-menu {
+  background-color: #444;
 }
 
-/* body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-background-color: #f0f0f0;
+.dark-mode .dropdown-menu a {
+  color: #fff;
+}
+.dark-mode .dropdown-menu a:hover {
+  color: #121212;
+}
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+  /* Adjust header layout for smaller screens */
+  header {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+
+  .logo {
+      align-items: center;
+      gap: 10px;
+  }
+
+  .logo-img {
+      width: 80px;
+      height: auto;
+  }
+
+  .logo-text {
+      font-size: 18px;
+      text-align: center;
+  }
+
+  /* Adjust navbar icons */
+  .navbar i {
+      font-size: 25px;
+  }
+
+  /* Dropdown menu adjustments */
+  .dropdown-menu {
+      right: 0; 
+  }
+
+  .dropdown-menu a {
+      padding: 12px;
+      font-size: 16px;
+  }
+
+  /* Container adjustments for smaller screens */
+  .container {
+      width: 90%;
+      margin: 20px auto;
+      padding: 20px;
+  }
+
+  /* Center and stack dashboard buttons */
+  .button-container {
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+  }
+
+  .dashboard-button {
+      width: 70%; /* Full width on smaller screens */
+      padding: 15px;
+      font-size: 18px;
+  }
+
+  .button-logo {
+      width: 40px;
+      height: 40px;
+  }
+
+  /* User info adjustments */
+  .user-info {
+      padding: 10px;
+      right: 5px;
+  }
+
+  .user-info button {
+      width: 100%;
+      font-size: 16px;
+  }
 }
 
-.container {
-width: 80%;
-margin: 50px auto;
-background-color: white;
-padding: 20px;
-border-radius: 10px;
-font-style:bold;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Additional breakpoint for ultra-small screens (e.g., phones < 480px) */
+@media (max-width: 480px) {
+  .logo-img {
+      width: 60px;
+  }
+
+  .logo-text {
+      font-size: 10px;
+  }
+
+  .navbar i {
+      font-size: 20px;
+  }
+
+  .container {
+      padding: 10px;
+  }
+
+  .dashboard-button {
+      font-size: 16px;
+      padding: 10px;
+  }
+
+  .button-logo {
+      width: 30px;
+      height: 30px;
+  }
+
+  .dropdown-menu a {
+      font-size: 14px;
+  }
 }
 
-h1 {
-text-align: center;
-margin-bottom: 30px;
-}
 
-.button-container {
-display: flex;
-justify-content: space-around;
-}
-
-.dashboard-button {
-background-color: #4CAF50;
-color: white;
-padding: 15px 20px;
-border: none;
-border-radius: 10px;
-font-size: 16px;
-cursor: pointer;
-display: flex;
-flex-direction: column;
-align-items: center;
-transition: background-color 0.3s;
-}
-
-.dashboard-button:hover {
-background-color: #45a049;
-}
-
-.button-logo {
-width: 50px;
-height: 50px;
-margin-bottom: 10px;
-}  */
