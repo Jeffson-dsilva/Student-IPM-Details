@@ -4,9 +4,8 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "college_ipm_system";
-$port=3307;
-
-$conn = new mysqli($servername, $username, $password, $dbname,$port);
+$port = 3307;
+$conn = new mysqli($servername, $username, $password, $dbname, $port);
 
 if ($conn->connect_error) {
     echo json_encode(['success' => false, 'message' => 'Connection failed: ' . $conn->connect_error]);
@@ -32,12 +31,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
         // Validate credentials against the database based on role
         if ($role === 'student') {
-            // For students, check USN, email, and password
             $query = "SELECT * FROM students WHERE usn = ? AND email = ? AND password = ?";
             $stmt = $conn->prepare($query);
             $stmt->bind_param("sss", $usn, $email, $password);
         } else {
-            // For faculty and HOD, check email and password
             $table = $role === 'faculty' ? 'faculty' : 'hod';
             $query = "SELECT * FROM $table WHERE email = ? AND password = ?";
             $stmt = $conn->prepare($query);
@@ -48,15 +45,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $result = $stmt->get_result();
 
         if ($result->num_rows === 1) {
-            // Successful login, set session variable for student email
+            $row = $result->fetch_assoc();
             if ($role === 'student') {
-                $_SESSION['email'] = $email;  // Set session variable for student email
+                $_SESSION['email'] = $email;
                 header("Location: stDashboard.php");
                 exit();
             } elseif ($role === 'faculty') {
+                // Set faculty-specific session variables
+                $_SESSION['email'] = $email;
+                $_SESSION['name'] = $row['name']; // Assuming 'name' column in faculty table
+                $_SESSION['employee_id'] = $row['employee_id'];     // Assuming 'emp_id' column in faculty table
                 header("Location: ftDashboard.php");
                 exit();
             } elseif ($role === 'hod') {
+                // Set HOD-specific session variables
+                $_SESSION['email'] = $email;
+                $_SESSION['name'] = $row['name']; // HOD name
+                $_SESSION['employee_id'] = $row['employee_id']; // HOD employee ID
                 header("Location: hoddashboard.php");
                 exit();
             }
@@ -67,6 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 ?>
+
 
 <!-- HTML login form -->
 <!DOCTYPE html>
